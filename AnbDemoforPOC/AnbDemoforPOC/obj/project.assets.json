@@ -9750,11 +9750,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\APIs\\AnbDemoforPOC\\AnbDemoforPOC\\AnbDemoforLogin.csproj",
+      "projectUniqueName": "D:\\API\\AnbDemoforPOC\\AnbDemoforPOC\\AnbDemoforLogin.csproj",
       "projectName": "AnbDemoforLogin",
-      "projectPath": "D:\\APIs\\AnbDemoforPOC\\AnbDemoforPOC\\AnbDemoforLogin.csproj",
+      "projectPath": "D:\\API\\AnbDemoforPOC\\AnbDemoforPOC\\AnbDemoforLogin.csproj",
       "packagesPath": "C:\\Users\\sriram.biccavolu\\.nuget\\packages\\",
-      "outputPath": "D:\\APIs\\AnbDemoforPOC\\AnbDemoforPOC\\obj\\",
+      "outputPath": "D:\\API\\AnbDemoforPOC\\AnbDemoforPOC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
