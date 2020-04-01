@@ -298,3 +298,4 @@ D:\APIs\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\AnbDemoforLogin.Razo
 D:\APIs\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\AnbDemoforLogin.csproj.CopyComplete
 D:\APIs\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\AnbDemoforLogin.dll
 D:\APIs\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\AnbDemoforLogin.pdb
+D:\APIs\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\AnbDemoforLogin.csprojAssemblyReference.cache
