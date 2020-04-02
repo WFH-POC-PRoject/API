@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Register.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Register
 {
@@ -26,6 +23,30 @@ namespace Register
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowMyOrign",
+                  builder =>
+                  {
+                      builder.WithOrigins("https://localhost:44325").AllowAnyHeader().AllowAnyMethod();
+
+                  });
+
+            });
+            services.AddDbContext<IdentityServiceContext>(cfg =>
+            {
+                cfg.UseSqlServer(Configuration.GetConnectionString("AppData"));
+            });
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = Context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+            services.AddIdentity<AppUser, AppRole>(options =>
+            {
+                options.User.RequireUniqueEmail = true;
+            }).AddEntityFrameworkStores<IdentityServiceContext>()
+              .AddDefaultTokenProviders();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,9 +58,9 @@ namespace Register
             }
 
             app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseRouting();
-
+            app.UseCors("AllowMyOrign");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
