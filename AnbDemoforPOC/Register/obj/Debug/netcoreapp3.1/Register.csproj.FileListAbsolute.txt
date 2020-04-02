@@ -7,6 +7,7 @@ D:\API\AnbDemoforPOC\Register\bin\Debug\netcoreapp3.1\Register.runtimeconfig.jso
 D:\API\AnbDemoforPOC\Register\bin\Debug\netcoreapp3.1\Register.runtimeconfig.dev.json
 D:\API\AnbDemoforPOC\Register\bin\Debug\netcoreapp3.1\Register.dll
 D:\API\AnbDemoforPOC\Register\bin\Debug\netcoreapp3.1\Register.pdb
+D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.1\Register.csprojAssemblyReference.cache
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.1\staticwebassets\Register.StaticWebAssets.Manifest.cache
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.1\staticwebassets\Register.StaticWebAssets.xml
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.1\Register.MvcApplicationPartsAssemblyInfo.cache
