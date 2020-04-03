@@ -109,13 +109,13 @@ D:\API\AnbDemoforPOC\Register\bin\Debug\netcoreapp3.0\runtimes\win-x86\native\sn
 D:\API\AnbDemoforPOC\Register\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\API\AnbDemoforPOC\Register\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\API\AnbDemoforPOC\Register\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\staticwebassets\Register.StaticWebAssets.Manifest.cache
-D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\staticwebassets\Register.StaticWebAssets.xml
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.MvcApplicationPartsAssemblyInfo.cache
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.AssemblyInfoInputs.cache
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.AssemblyInfo.cs
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.RazorTargetAssemblyInfo.cache
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.csproj.CopyComplete
+D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\staticwebassets\Register.StaticWebAssets.Manifest.cache
+D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\staticwebassets\Register.StaticWebAssets.xml
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.dll
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.pdb
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.csprojAssemblyReference.cache

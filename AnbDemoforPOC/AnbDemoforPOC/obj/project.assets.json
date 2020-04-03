@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "Antlr/3.4.1.9004": {
-        "type": "package",
-        "compile": {
-          "lib/Antlr3.Runtime.dll": {}
-        },
-        "runtime": {
-          "lib/Antlr3.Runtime.dll": {}
-        }
-      },
       "AutoMapper/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -22,59 +13,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/AutoMapper.dll": {}
-        }
-      },
-      "FSharp.Core/4.3.4": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.6/FSharp.Core.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/FSharp.Core.dll": {}
-        },
-        "resource": {
-          "lib/netstandard1.6/cs/FSharp.Core.resources.dll": {
-            "locale": "cs"
-          },
-          "lib/netstandard1.6/de/FSharp.Core.resources.dll": {
-            "locale": "de"
-          },
-          "lib/netstandard1.6/en/FSharp.Core.resources.dll": {
-            "locale": "en"
-          },
-          "lib/netstandard1.6/es/FSharp.Core.resources.dll": {
-            "locale": "es"
-          },
-          "lib/netstandard1.6/fr/FSharp.Core.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/netstandard1.6/it/FSharp.Core.resources.dll": {
-            "locale": "it"
-          },
-          "lib/netstandard1.6/ja/FSharp.Core.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/netstandard1.6/ko/FSharp.Core.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/netstandard1.6/pl/FSharp.Core.resources.dll": {
-            "locale": "pl"
-          },
-          "lib/netstandard1.6/pt-BR/FSharp.Core.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/netstandard1.6/ru/FSharp.Core.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/netstandard1.6/tr/FSharp.Core.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/netstandard1.6/zh-Hans/FSharp.Core.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/netstandard1.6/zh-Hant/FSharp.Core.resources.dll": {
-            "locale": "zh-Hant"
-          }
         }
       },
       "IdentityModel/4.1.1": {
@@ -1678,18 +1616,6 @@
           }
         }
       },
-      "Suave/2.5.6": {
-        "type": "package",
-        "dependencies": {
-          "FSharp.Core": "4.3.4"
-        },
-        "compile": {
-          "lib/netstandard2.0/Suave.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Suave.dll": {}
-        }
-      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3204,36 +3130,10 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "WebGrease/1.6.0": {
-        "type": "package",
-        "dependencies": {
-          "Antlr": "3.4.1.9004",
-          "Newtonsoft.Json": "5.0.4"
-        },
-        "compile": {
-          "lib/WebGrease.dll": {}
-        },
-        "runtime": {
-          "lib/WebGrease.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "Antlr/3.4.1.9004": {
-      "sha512": "c1S+HBE+KYA5EBxtn25LEK02hHPH/tDQ6RviUTTCJpZIPoputtn8ArsQJy9lVJWZOnw37ufByO2Fmf1M8wpr8Q==",
-      "type": "package",
-      "path": "antlr/3.4.1.9004",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "antlr.3.4.1.9004.nupkg.sha512",
-        "antlr.nuspec",
-        "lib/Antlr3.Runtime.dll",
-        "lib/Antlr3.Runtime.pdb"
-      ]
-    },
     "AutoMapper/9.0.0": {
       "sha512": "xCqvoxT4HIrNY/xlXG9W+BA/awdrhWvMTKTK/igkGSRbhOhpl3Q8O8Gxlhzjc9JsYqE7sS6AxgyuUUvZ6R5/Bw==",
       "type": "package",
@@ -3249,67 +3149,6 @@
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.pdb",
         "lib/netstandard2.0/AutoMapper.xml"
-      ]
-    },
-    "FSharp.Core/4.3.4": {
-      "sha512": "u2UeaUl1pt/Lktdpzq3AsaRmOV1mOiQaSbZgYqQQYuqBSjnILWemetff4xMZIAZi0241jlIkcrJQsU5PlLwIJA==",
-      "type": "package",
-      "path": "fsharp.core/4.3.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fsharp.core.4.3.4.nupkg.sha512",
-        "fsharp.core.nuspec",
-        "lib/net45/FSharp.Core.dll",
-        "lib/net45/FSharp.Core.optdata",
-        "lib/net45/FSharp.Core.sigdata",
-        "lib/net45/FSharp.Core.xml",
-        "lib/net45/UnitTests/MockTypeProviders/cs/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/de/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/en/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/es/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/fr/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/it/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/ja/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/ko/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/pl/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/pt-BR/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/ru/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/tr/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/zh-Hans/FSharp.Core.resources.dll",
-        "lib/net45/UnitTests/MockTypeProviders/zh-Hant/FSharp.Core.resources.dll",
-        "lib/net45/cs/FSharp.Core.resources.dll",
-        "lib/net45/de/FSharp.Core.resources.dll",
-        "lib/net45/en/FSharp.Core.resources.dll",
-        "lib/net45/es/FSharp.Core.resources.dll",
-        "lib/net45/fr/FSharp.Core.resources.dll",
-        "lib/net45/it/FSharp.Core.resources.dll",
-        "lib/net45/ja/FSharp.Core.resources.dll",
-        "lib/net45/ko/FSharp.Core.resources.dll",
-        "lib/net45/pl/FSharp.Core.resources.dll",
-        "lib/net45/pt-BR/FSharp.Core.resources.dll",
-        "lib/net45/ru/FSharp.Core.resources.dll",
-        "lib/net45/tr/FSharp.Core.resources.dll",
-        "lib/net45/zh-Hans/FSharp.Core.resources.dll",
-        "lib/net45/zh-Hant/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/FSharp.Core.dll",
-        "lib/netstandard1.6/FSharp.Core.optdata",
-        "lib/netstandard1.6/FSharp.Core.sigdata",
-        "lib/netstandard1.6/FSharp.Core.xml",
-        "lib/netstandard1.6/cs/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/de/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/en/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/es/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/fr/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/it/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/ja/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/ko/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/pl/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/pt-BR/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/ru/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/tr/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/zh-Hans/FSharp.Core.resources.dll",
-        "lib/netstandard1.6/zh-Hant/FSharp.Core.resources.dll"
       ]
     },
     "IdentityModel/4.1.1": {
@@ -5249,12 +5088,11 @@
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
-      "sha512": "INBPonS5QPEgn7naufQFXJEp3zX6L4bwHgJ/ZH78aBTpeNfQMtf7C6VrAFhlq2xxWBveIOWyFzQjJ8XzHMhdOQ==",
+      "sha512": "b+V9JC/Ii3sR659flBeaBJww111425tgjcDS1k+hqV4sGh9FALRDBvJnDtQ895gAzpPTUOFDHdqaZ2Et7BpZMg==",
       "type": "package",
       "path": "runtime.native.system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -5276,11 +5114,12 @@
       ]
     },
     "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "jwjwlEL0Elv6gwoyaokRn12nv/JE+UW/DXJEbzhjCPvGbef36StnHKc9XaZD/rGWqYicrphZ7eumR/jdmNcjRg==",
+      "sha512": "DloMk88juo0OuOWr56QG7MNchmafTLYWvABy36izkrLI5VledI0rq28KGs1i9wbpeT9NPQrx/wTf8U2vazqQ3Q==",
       "type": "package",
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -5315,7 +5154,7 @@
       ]
     },
     "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "G2+96gYRbzp1JZCID6B+u2XJ0bs2wCubd6rE3+Tj436dKfnciF7YgsLi2VvLeJq6kxYyU4IJrVrpCvC8Yf6bhA==",
+      "sha512": "KeLz4HClKf+nFS7p/6Fi/CqyLXh81FpiGzcmuS8DGi9lUqSnZ6Es23/gv2O+1XVGfrbNmviF7CckBpavkBoIFQ==",
       "type": "package",
       "path": "runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -5328,7 +5167,7 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "Kh9W4agE0r/hK8AX1LvyQI2NrKHBL8pO0gRoDTdDb0LL6Ta1Z2OtFx3lOaAE0ZpCUc/dt9Wzs3rA7a3IsKdOVA==",
+      "sha512": "kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
@@ -5367,7 +5206,7 @@
       ]
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
+      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
       "type": "package",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -5448,84 +5287,6 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "Suave/2.5.6": {
-      "sha512": "3Cusxs8m9JxzfF6W8zsSVNTys/lP0gmMmspvCXSxouuK8EjQNmUS4CJmFgJkftsZj0f9z5h3+JfUWzVyBS3OsA==",
-      "type": "package",
-      "path": "suave/2.5.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net461/Suave.dll",
-        "lib/net461/Suave.pdb",
-        "lib/net461/Suave.xml",
-        "lib/netstandard2.0/Suave.dll",
-        "lib/netstandard2.0/Suave.pdb",
-        "lib/netstandard2.0/Suave.xml",
-        "src/Suave/AssemblyInfo.fs",
-        "src/Suave/Authentication.fs",
-        "src/Suave/Authentication.fsi",
-        "src/Suave/Combinators.fs",
-        "src/Suave/Combinators.fsi",
-        "src/Suave/Compression.fs",
-        "src/Suave/ConnectionFacade.fs",
-        "src/Suave/Cookie.fs",
-        "src/Suave/Cookie.fsi",
-        "src/Suave/CookieSerialiser.fs",
-        "src/Suave/DefaultTlsProvider.fs",
-        "src/Suave/Globals.fs",
-        "src/Suave/Headers.fs",
-        "src/Suave/Http.fs",
-        "src/Suave/Http.fsi",
-        "src/Suave/HttpOutput.fs",
-        "src/Suave/Json.fs",
-        "src/Suave/Model.fs",
-        "src/Suave/Native.fs",
-        "src/Suave/Operators.fs",
-        "src/Suave/Owin.fs",
-        "src/Suave/ParsingAndControl.fs",
-        "src/Suave/Sockets/AsyncSocket.fs",
-        "src/Suave/Sockets/AsyncUserToken.fs",
-        "src/Suave/Sockets/BufferManager.fs",
-        "src/Suave/Sockets/ConcurrentPool.fs",
-        "src/Suave/Sockets/Connection.fs",
-        "src/Suave/Sockets/ITransport.fs",
-        "src/Suave/Sockets/SocketBinding.fs",
-        "src/Suave/Sockets/SocketMonad.fs",
-        "src/Suave/Sockets/SocketOp.fs",
-        "src/Suave/Sockets/TcpTransport.fs",
-        "src/Suave/Sockets/TransportStream.fs",
-        "src/Suave/Sscanf.fs",
-        "src/Suave/State.fs",
-        "src/Suave/SuaveConfig.fs",
-        "src/Suave/Tcp.fs",
-        "src/Suave/TcpServerFactory.fs",
-        "src/Suave/Utils/ASCII.fs",
-        "src/Suave/Utils/Aether.fs",
-        "src/Suave/Utils/AsyncExtensions.fs",
-        "src/Suave/Utils/AsyncResultCell.fs",
-        "src/Suave/Utils/Bytes.fs",
-        "src/Suave/Utils/Choice.fs",
-        "src/Suave/Utils/Collections.fs",
-        "src/Suave/Utils/Compression.fs",
-        "src/Suave/Utils/Crypto.fs",
-        "src/Suave/Utils/CultureInfoCache.fs",
-        "src/Suave/Utils/Logging.fs",
-        "src/Suave/Utils/OpenMemoryStream.fs",
-        "src/Suave/Utils/Parse.fs",
-        "src/Suave/Utils/Parsing.fs",
-        "src/Suave/Utils/Property.fs",
-        "src/Suave/Utils/RangedStream.fs",
-        "src/Suave/Utils/ThreadSafeRandom.fs",
-        "src/Suave/Utils/TraceHeader.fs",
-        "src/Suave/Utils/YoLo.fs",
-        "src/Suave/Web.fs",
-        "src/Suave/WebPart.fs",
-        "src/Suave/WebPart.fsi",
-        "src/Suave/WebSocket.fs",
-        "suave.2.5.6.nupkg.sha512",
-        "suave.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -6030,7 +5791,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "sha512": "HZiP0DwTHJ+C+rdFqP47nBYUh5283kcwXIGY2zOVVhsJmVI/2tYiX2zNRdjRQRHsTox58Ydkec6h0pWSh8wAsw==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -8370,7 +8131,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "2Z5t70a2SwMsfQDp9KOclaZNyQhfIga2gppq9lIUDM1A4ohTshn4JqT7ir8bvIhXgorWKYDAr6rPzEbi/nTGKg==",
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -9633,7 +9394,7 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
+      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
@@ -9701,20 +9462,6 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
-    },
-    "WebGrease/1.6.0": {
-      "sha512": "1d29edoh4IZPLig82coowiPBS1ltxT97PwEIkOk0dHqtJwD9v5C7gPm6Ot1hKHT86otKm04oDQ00x5c+PyVyxw==",
-      "type": "package",
-      "path": "webgrease/1.6.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/WebGrease.dll",
-        "tools/WG.EXE",
-        "webgrease.1.6.0.nupkg.sha512",
-        "webgrease.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -9738,13 +9485,11 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.0.0",
       "Microsoft.Extensions.Logging.Debug >= 3.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore >= 3.0.0",
-      "Suave >= 2.5.6",
-      "WebGrease >= 1.6.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore >= 3.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sriram.biccavolu\\.nuget\\packages\\": {},
+    "C:\\Users\\mallesh.n\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -9753,19 +9498,21 @@
       "projectUniqueName": "D:\\API\\AnbDemoforPOC\\AnbDemoforPOC\\Login.csproj",
       "projectName": "Login",
       "projectPath": "D:\\API\\AnbDemoforPOC\\AnbDemoforPOC\\Login.csproj",
-      "packagesPath": "C:\\Users\\sriram.biccavolu\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\mallesh.n\\.nuget\\packages\\",
       "outputPath": "D:\\API\\AnbDemoforPOC\\AnbDemoforPOC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\sriram.biccavolu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\mallesh.n\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9865,14 +9612,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.0.0, )"
-          },
-          "Suave": {
-            "target": "Package",
-            "version": "[2.5.6, )"
-          },
-          "WebGrease": {
-            "target": "Package",
-            "version": "[1.6.0, )"
           }
         },
         "imports": [
@@ -9892,15 +9631,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.0.1, 3.0.1]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
+            "version": "[3.0.3, 3.0.3]"
           }
         ],
         "frameworkReferences": {
@@ -9911,7 +9642,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -9920,28 +9651,8 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Antlr 3.4.1.9004' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Antlr",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'WebGrease 1.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
-      "libraryId": "WebGrease",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.0"
       ]
