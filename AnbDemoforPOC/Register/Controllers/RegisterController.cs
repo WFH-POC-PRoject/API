@@ -62,7 +62,7 @@ namespace Register.Controllers
                         var message = new IdentityMessage
                         {
                             Body = body,
-                            Destination = "sriram.biccavolu@anblicks.com",
+                            Destination = appUser.Email,
                             Subject = subject
                         };
                         MailMessage msg = new MailMessage();
