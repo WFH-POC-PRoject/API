@@ -118,4 +118,3 @@ D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\staticwebassets\Register.S
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\staticwebassets\Register.StaticWebAssets.xml
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.dll
 D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.pdb
-D:\API\AnbDemoforPOC\Register\obj\Debug\netcoreapp3.0\Register.csprojAssemblyReference.cache
