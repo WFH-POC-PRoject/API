@@ -65,6 +65,7 @@ namespace Register.Controllers
                             Destination = appUser.Email,
                             Subject = subject
                         };
+
                         MailMessage msg = new MailMessage();
                         msg.From = new MailAddress("sriram.biccavolu@anblicks.com");
                         msg.To.Add(new MailAddress(message.Destination));
