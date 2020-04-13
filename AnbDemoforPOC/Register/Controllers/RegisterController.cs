@@ -62,7 +62,7 @@ namespace Register.Controllers
                         var message = new IdentityMessage
                         {
                             Body = body,
-                            Destination = appUser.Email,
+                            Destination = appUser.Email,// added by mallesh
                             Subject = subject
                         };
 
