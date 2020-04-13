@@ -121,6 +121,7 @@ D:\API\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\runtimes\unix\lib\net
 D:\API\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\API\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
 D:\API\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\API\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\Login.csprojAssemblyReference.cache
 D:\API\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\Login.MvcApplicationPartsAssemblyInfo.cache
 D:\API\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\Login.AssemblyInfoInputs.cache
 D:\API\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\Login.AssemblyInfo.cs
