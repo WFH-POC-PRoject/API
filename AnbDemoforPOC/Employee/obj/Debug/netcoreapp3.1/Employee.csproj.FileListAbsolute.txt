@@ -1,0 +1,13 @@
+D:\API\AnbDemoforPOC\Employee\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\API\AnbDemoforPOC\Employee\bin\Debug\netcoreapp3.1\appsettings.json
+D:\API\AnbDemoforPOC\Employee\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\API\AnbDemoforPOC\Employee\bin\Debug\netcoreapp3.1\Employee.exe
+D:\API\AnbDemoforPOC\Employee\obj\Debug\netcoreapp3.1\Employee.csprojAssemblyReference.cache
+D:\API\AnbDemoforPOC\Employee\obj\Debug\netcoreapp3.1\staticwebassets\Employee.StaticWebAssets.Manifest.cache
+D:\API\AnbDemoforPOC\Employee\obj\Debug\netcoreapp3.1\staticwebassets\Employee.StaticWebAssets.xml
+D:\API\AnbDemoforPOC\Employee\obj\Debug\netcoreapp3.1\Employee.AssemblyInfoInputs.cache
+D:\API\AnbDemoforPOC\Employee\obj\Debug\netcoreapp3.1\Employee.AssemblyInfo.cs
+D:\API\AnbDemoforPOC\Employee\obj\Debug\netcoreapp3.1\Employee.RazorTargetAssemblyInfo.cache
+D:\API\AnbDemoforPOC\Employee\bin\Debug\netcoreapp3.1\IdentityModel.dll
+D:\API\AnbDemoforPOC\Employee\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\API\AnbDemoforPOC\Employee\obj\Debug\netcoreapp3.1\Employee.csproj.CopyComplete

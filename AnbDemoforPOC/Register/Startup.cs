@@ -28,8 +28,8 @@ namespace Register
                 options.AddPolicy("AllowMyOrign",
                   builder =>
                   {
-                      builder.WithOrigins("https://localhost:44325").AllowAnyHeader().AllowAnyMethod();
-
+                      //builder.WithOrigins("https://localhost:44325").AllowAnyHeader().AllowAnyMethod();
+                      builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                   });
 
             });
