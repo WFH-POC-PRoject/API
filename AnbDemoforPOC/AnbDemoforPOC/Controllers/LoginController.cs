@@ -39,17 +39,18 @@ namespace AnbDemoforPOC.Controllerss
         {
           
             var user = await _userManager.FindByNameAsync(objuserlogin.UserName);
-            var role = await _userManager.GetRolesAsync(user);
+            //var role = await _userManager.GetRolesAsync(user);
             if (user != null && await _userManager.CheckPasswordAsync(user, objuserlogin.PasswordHash))
             {
-                if (role != null && Convert.ToString(user.Managerid) != null)
-                {
-                    Console.WriteLine("Succefully Logged In!");
-                }
-                else
-                {
-                    Console.WriteLine("Role / Manager not be assigned.");
-                }
+                //if (role != null && Convert.ToString(user.Managerid) != null)
+                //{
+                //    Console.WriteLine("Succefully Logged In!");
+                //}
+                //else
+                //{
+                //    Console.WriteLine("Role / Manager not be assigned.");
+                //}
+                Console.WriteLine("Succefully..!");
             }
             else
             {

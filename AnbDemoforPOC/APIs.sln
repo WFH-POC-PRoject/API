@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Register", "Register\Regist
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResetPassword", "ResetPassword\ResetPassword.csproj", "{8667B70A-8F1C-4D9F-9CA3-8DF56F9AF34E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateEmployee", "UpdateEmployee\UpdateEmployee.csproj", "{1F476E02-198C-49BD-8A56-058AE731D65B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpdateEmployee", "UpdateEmployee\UpdateEmployee.csproj", "{1F476E02-198C-49BD-8A56-058AE731D65B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
