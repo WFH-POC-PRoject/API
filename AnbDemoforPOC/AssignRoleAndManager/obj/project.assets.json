@@ -7132,11 +7132,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\API\\AnbDemoforPOC\\AssignRoleAndManager\\AssignRoleAndManager.csproj",
+      "projectUniqueName": "D:\\API-New\\AnbDemoforPOC\\AssignRoleAndManager\\AssignRoleAndManager.csproj",
       "projectName": "AssignRoleAndManager",
-      "projectPath": "D:\\API\\AnbDemoforPOC\\AssignRoleAndManager\\AssignRoleAndManager.csproj",
+      "projectPath": "D:\\API-New\\AnbDemoforPOC\\AssignRoleAndManager\\AssignRoleAndManager.csproj",
       "packagesPath": "C:\\Users\\sriram.biccavolu\\.nuget\\packages\\",
-      "outputPath": "D:\\API\\AnbDemoforPOC\\AssignRoleAndManager\\obj\\",
+      "outputPath": "D:\\API-New\\AnbDemoforPOC\\AssignRoleAndManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

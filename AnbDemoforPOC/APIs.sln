@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResetPassword", "ResetPassw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpdateEmployee", "UpdateEmployee\UpdateEmployee.csproj", "{1F476E02-198C-49BD-8A56-058AE731D65B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssignRoleAndManager", "AssignRoleAndManager\AssignRoleAndManager.csproj", "{28AEFE16-329A-42D5-A0FF-315F6539B152}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Employee", "GetEmployees\Employee.csproj", "{F97B74E9-C218-46F1-95F7-31B7D3950399}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{1F476E02-198C-49BD-8A56-058AE731D65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F476E02-198C-49BD-8A56-058AE731D65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F476E02-198C-49BD-8A56-058AE731D65B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28AEFE16-329A-42D5-A0FF-315F6539B152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AEFE16-329A-42D5-A0FF-315F6539B152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AEFE16-329A-42D5-A0FF-315F6539B152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AEFE16-329A-42D5-A0FF-315F6539B152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F97B74E9-C218-46F1-95F7-31B7D3950399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97B74E9-C218-46F1-95F7-31B7D3950399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97B74E9-C218-46F1-95F7-31B7D3950399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97B74E9-C218-46F1-95F7-31B7D3950399}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

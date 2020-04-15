@@ -7837,11 +7837,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\API\\AnbDemoforPOC\\Employee\\Employee.csproj",
+      "projectUniqueName": "D:\\API-New\\AnbDemoforPOC\\GetEmployees\\Employee.csproj",
       "projectName": "Employee",
-      "projectPath": "D:\\API\\AnbDemoforPOC\\Employee\\Employee.csproj",
+      "projectPath": "D:\\API-New\\AnbDemoforPOC\\GetEmployees\\Employee.csproj",
       "packagesPath": "C:\\Users\\sriram.biccavolu\\.nuget\\packages\\",
-      "outputPath": "D:\\API\\AnbDemoforPOC\\Employee\\obj\\",
+      "outputPath": "D:\\API-New\\AnbDemoforPOC\\GetEmployees\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
