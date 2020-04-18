@@ -10,7 +10,7 @@ namespace AnbDemoforPOC.Models
 {
     public class AppUser:IdentityUser<int>
     {
-        public int Managerid { get; set; }
+        public int? Managerid { get; set; }
 
         //[Required]
         //public string UserName { get; set; }

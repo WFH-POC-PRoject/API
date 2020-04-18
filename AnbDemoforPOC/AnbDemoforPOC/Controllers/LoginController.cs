@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
-using System.Web.Http;
 using AnbDemoforPOC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.Sql;
+using Microsoft.Extensions.Logging;
 
-namespace AnbDemoforPOC.Controllerss
+namespace AnbDemoforPOC.Controllers
 {
     [ApiController]
     [EnableCors("_myAllowSpecificOrigins")]
-    [System.Web.Http.Route("[controller]")]
+    [Route("[controller]")]
     public class LoginController : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager;
@@ -24,7 +25,7 @@ namespace AnbDemoforPOC.Controllerss
             _userManager = userManager;
         }
 
-        [System.Web.Http.HttpGet]
+        [HttpGet]
         public IEnumerable<AppUser> Login()
         {
             AppUser x = new AppUser();
@@ -35,7 +36,7 @@ namespace AnbDemoforPOC.Controllerss
             }).ToArray();
         }
 
-        [System.Web.Http.HttpPost]
+        [HttpPost]
         public async Task<IActionResult> Login(AppUser objuserlogin)
         {
             AppUser appUser = new AppUser();
@@ -44,7 +45,7 @@ namespace AnbDemoforPOC.Controllerss
             {
                 var role = await _userManager.GetRolesAsync(user);
 
-                if (role != null)
+                if (role.Count>0)
                 {
                     if (await _userManager.CheckPasswordAsync(user, objuserlogin.PasswordHash))
                     {
