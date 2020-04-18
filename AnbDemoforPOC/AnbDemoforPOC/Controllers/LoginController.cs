@@ -37,27 +37,40 @@ namespace AnbDemoforPOC.Controllerss
         [HttpPost]
         public async Task<IActionResult> Login(AppUser objuserlogin)
         {
-          
+            AppUser appUser = new AppUser();
             var user = await _userManager.FindByNameAsync(objuserlogin.UserName);
-            //var role = await _userManager.GetRolesAsync(user);
-            if (user != null && await _userManager.CheckPasswordAsync(user, objuserlogin.PasswordHash))
+            if (user != null)
             {
-                //if (role != null && Convert.ToString(user.Managerid) != null)
-                //{
-                //    Console.WriteLine("Succefully Logged In!");
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Role / Manager not be assigned.");
-                //}
-                Console.WriteLine("Succefully..!");
+                var role = await _userManager.GetRolesAsync(user);
+
+                if (role != null)
+                {
+                    if (await _userManager.CheckPasswordAsync(user, objuserlogin.PasswordHash))
+                    {
+                        appUser.Id = 1;
+                        appUser.UserName = role.FirstOrDefault();
+                        return Ok(appUser);
+                    }
+                    else
+                    {
+                        appUser.Id = 2;
+                        appUser.UserName = "";
+                        return Ok(appUser);
+                    }
+                }
+                else
+                {
+                    appUser.Id = 3;
+                    appUser.UserName = "";
+                    return Ok(appUser);
+                }
             }
             else
             {
-                Console.WriteLine("InCorrect Username or Password");
+                appUser.Id = 4;
+                appUser.UserName = "";
+                return Ok(appUser);
             }
-
-            return Ok(user);
         }
 
     }
