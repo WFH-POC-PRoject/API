@@ -240,12 +240,12 @@ D:\API-New\AnbDemoforPOC\UpdateEmployee\bin\Debug\netcoreapp3.0\runtimes\unix\li
 D:\API-New\AnbDemoforPOC\UpdateEmployee\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\API-New\AnbDemoforPOC\UpdateEmployee\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\UpdateEmployee.csprojAssemblyReference.cache
+D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\staticwebassets\UpdateEmployee.StaticWebAssets.Manifest.cache
+D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\staticwebassets\UpdateEmployee.StaticWebAssets.xml
 D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\UpdateEmployee.MvcApplicationPartsAssemblyInfo.cache
 D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\UpdateEmployee.AssemblyInfoInputs.cache
 D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\UpdateEmployee.AssemblyInfo.cs
 D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\UpdateEmployee.RazorTargetAssemblyInfo.cache
 D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\UpdateEmployee.csproj.CopyComplete
-D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\staticwebassets\UpdateEmployee.StaticWebAssets.Manifest.cache
-D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\staticwebassets\UpdateEmployee.StaticWebAssets.xml
 D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\UpdateEmployee.dll
 D:\API-New\AnbDemoforPOC\UpdateEmployee\obj\Debug\netcoreapp3.0\UpdateEmployee.pdb

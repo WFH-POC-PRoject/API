@@ -151,12 +151,12 @@ D:\API-New\AnbDemoforPOC\GetEmployees\bin\Debug\netcoreapp3.0\runtimes\unix\lib\
 D:\API-New\AnbDemoforPOC\GetEmployees\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 D:\API-New\AnbDemoforPOC\GetEmployees\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\Employee.csprojAssemblyReference.cache
+D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\staticwebassets\Employee.StaticWebAssets.Manifest.cache
+D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\staticwebassets\Employee.StaticWebAssets.xml
 D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\Employee.MvcApplicationPartsAssemblyInfo.cache
 D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\Employee.AssemblyInfoInputs.cache
 D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\Employee.AssemblyInfo.cs
 D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\Employee.RazorTargetAssemblyInfo.cache
 D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\Employee.csproj.CopyComplete
-D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\staticwebassets\Employee.StaticWebAssets.Manifest.cache
-D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\staticwebassets\Employee.StaticWebAssets.xml
 D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\Employee.dll
 D:\API-New\AnbDemoforPOC\GetEmployees\obj\Debug\netcoreapp3.0\Employee.pdb
