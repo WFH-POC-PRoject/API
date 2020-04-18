@@ -131,6 +131,8 @@ D:\API\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\staticwebassets\Login
 D:\API\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\staticwebassets\Login.StaticWebAssets.xml
 D:\API\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\Login.dll
 D:\API\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\Login.pdb
+D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\appsettings.Development.json
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\appsettings.json
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
@@ -181,7 +183,6 @@ D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\Microsoft.VisualS
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
-D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\NuGet.Frameworks.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\System.Composition.AttributedModel.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\System.Composition.Convention.dll
@@ -211,7 +212,6 @@ D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\de\Microsoft.Code
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
@@ -254,7 +254,6 @@ D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\runtimes\unix\lib
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\API-New\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\Login.csprojAssemblyReference.cache
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\staticwebassets\Login.StaticWebAssets.Manifest.cache
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\staticwebassets\Login.StaticWebAssets.xml
 D:\API-New\AnbDemoforPOC\AnbDemoforPOC\obj\Debug\netcoreapp3.0\Login.MvcApplicationPartsAssemblyInfo.cache

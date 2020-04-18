@@ -48,7 +48,6 @@ namespace Employee.Controllers
                     var alldata = (from User in DBFactory.AspNetUsers
 
                                    join WU in DBFactory.AspNetUserRoles on User.Id equals WU.UserId
-
                                    join WR in DBFactory.AspNetRoles on WU.RoleId equals WR.Id
                                    where (User.Id == Convert.ToInt32(value))
                                    select new UserRoles
@@ -59,7 +58,8 @@ namespace Employee.Controllers
                                        LastName = User.FirstName,
                                        Email = User.Email,
                                        RoleName = WR.Name,
-                                       RoleId = WR.Id
+                                       RoleId = WR.Id,
+                                       ManagerName = WR.Name
                                    }).FirstOrDefault();
                     Alldata.Add(alldata);
                 }

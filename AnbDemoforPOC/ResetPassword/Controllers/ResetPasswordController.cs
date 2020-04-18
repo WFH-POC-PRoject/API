@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authorization;
+using System.Text;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Web;
+using System.Text.RegularExpressions;
 
 namespace ResetPassword.Controllers
 {
@@ -29,31 +33,40 @@ namespace ResetPassword.Controllers
         {
             Message _Message = new Message();
             IdentityResult identityResult = new IdentityResult();
-            //AppUser user = new AppUser();
             try
             {
-                //AppUser user = await userMgr.FindByEmailAsync("b.sriram6671@gmail.com");
-                AppUser user = await userMgr.FindByIdAsync(resetPassword.Id);
-                var token = await userMgr.GeneratePasswordResetTokenAsync(user);
-                //var encodedtoken = Encoding.UTF8.GetBytes(token);
-                //var validatetoken = WebEncoders.Base64UrlEncode(encodedtoken);
+                var user = await userMgr.FindByIdAsync(resetPassword.Id);
                 if (user != null && user.Id == Convert.ToInt32(resetPassword.Id))
                 {
-                    identityResult = await userMgr.ResetPasswordAsync(user, token, resetPassword.Confirmpassword);
-                    if (identityResult.Succeeded == true)
+                    var geneEmailToken = await userMgr.GenerateEmailConfirmationTokenAsync(user);
+                    var response = await userMgr.ConfirmEmailAsync(user, geneEmailToken);
+                    if (resetPassword.Token == user.SecurityStamp)
                     {
-                        _Message.Status = "Success";
-                        _Message.StatusCode = 200;
-                        _Message.StatusMessage = "Successfully your Passwors Reset !!";
+                        var code = await userMgr.GeneratePasswordResetTokenAsync(user);
+                        var Result = await userMgr.ResetPasswordAsync(user, code, resetPassword.Confirmpassword);
+                        if (Result.Succeeded == true)
+                        {
+                            var _UpdateSecurityStampAsync = await userMgr.UpdateSecurityStampAsync(user);
+                            _Message.Status = "Success";
+                            _Message.StatusCode = 200;
+                            _Message.StatusMessage = "Your Password has been reset successfully.";
+                        }
                     }
-
+                    else
+                    {
+                        _Message.Status = "InvalidToken";
+                        _Message.StatusCode =100;
+                        _Message.StatusMessage = "Invalid Token.";
+                        return Ok(_Message);
+                    }
+                    
                     return Ok(_Message);
                 }
                 else
                 {
                     _Message.Status = "Failure";
-                    _Message.StatusCode = 200;
-                    _Message.StatusMessage = "Passwors Reset Failed !!";
+                    _Message.StatusCode = 300;
+                    _Message.StatusMessage = "Passwors Reset Failed.";
                     return Ok(_Message);
                 }
             }

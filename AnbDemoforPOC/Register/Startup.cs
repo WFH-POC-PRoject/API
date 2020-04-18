@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace Register
 {
@@ -47,6 +48,8 @@ namespace Register
                 options.User.RequireUniqueEmail = true;
             }).AddEntityFrameworkStores<IdentityServiceContext>()
               .AddDefaultTokenProviders();
+            services.Configure<DataProtectionTokenProviderOptions>(options =>
+             options.TokenLifespan = TimeSpan.FromDays(5));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

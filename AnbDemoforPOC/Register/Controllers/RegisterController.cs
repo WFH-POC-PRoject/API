@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authorization;
+using System.Text;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Web;
+using Microsoft.AspNetCore.Mvc.Routing;
 
 namespace Register.Controllers
 {
@@ -25,7 +29,8 @@ namespace Register.Controllers
             userMgr = userManager;
             siginMgr = signInManager;
         }
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; }       
+
         [HttpPost("Register")]
         [AllowAnonymous]
         public async Task<IActionResult> Register(AppUser appUser)
@@ -46,26 +51,23 @@ namespace Register.Controllers
                     IdentityResult result = await userMgr.CreateAsync(user, "Test123!");
                     if (result.Succeeded == true)
                     {
-                        // string callbackUrl = "file://C:/Users/sriram.biccavolu/Desktop/resetform.html";
-                        //string callbackUrl = "https://localhost:44325/Home/Privacy?IsSuperUser=" + appUser.Email;
+                        user = await userMgr.FindByIdAsync(user.Id.ToString());
+                        var code = user.SecurityStamp;
                         string configcallbackUrl = _configuration.GetValue<string>("callbackUrl");
-                        string callbackUrl = configcallbackUrl + user.Id;
-                        var user1 = await userMgr.FindByEmailAsync(appUser.Email);
-                        //var code = await userMgr.GeneratePasswordResetTokenAsync(user1);
+                        var callbackUrl = configcallbackUrl + user.Id + "&code=" + code;
                         var subject = "Reset password request.";
                         var body = "<html><body>" +
-                                   $"<h3>Hi {user1.FirstName.ToUpper().ToString()}!</h3>" +
+                                   $"<h3>Hi {user.FirstName.ToUpper().ToString()}!</h3>" +
                                    $"<h3>Your account has been created , please click below link to reset your password</h3>" +
                                    $"<a  href=\"" + callbackUrl + "\"> Reset password </a>" +
-                                   $"<h4>Thanks</h4>"+
+                                   $"<h4>Thanks</h4>" +
                         "</body></html>";
                         var message = new IdentityMessage
                         {
                             Body = body,
-                            Destination = appUser.Email,// added by mallesh
+                            Destination = user.Email,// added by mallesh
                             Subject = subject
                         };
-
                         MailMessage msg = new MailMessage();
                         msg.From = new MailAddress("sriram.biccavolu@anblicks.com");
                         msg.To.Add(new MailAddress(message.Destination));
