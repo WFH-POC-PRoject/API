@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http;
 using AnbDemoforPOC.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
@@ -12,7 +13,7 @@ namespace AnbDemoforPOC.Controllerss
 {
     [ApiController]
     [EnableCors("_myAllowSpecificOrigins")]
-    [Route("[controller]")]
+    [System.Web.Http.Route("[controller]")]
     public class LoginController : ControllerBase
     {
         private readonly UserManager<AppUser> _userManager;
@@ -23,7 +24,7 @@ namespace AnbDemoforPOC.Controllerss
             _userManager = userManager;
         }
 
-        [HttpGet]
+        [System.Web.Http.HttpGet]
         public IEnumerable<AppUser> Login()
         {
             AppUser x = new AppUser();
@@ -34,7 +35,7 @@ namespace AnbDemoforPOC.Controllerss
             }).ToArray();
         }
 
-        [HttpPost]
+        [System.Web.Http.HttpPost]
         public async Task<IActionResult> Login(AppUser objuserlogin)
         {
             AppUser appUser = new AppUser();

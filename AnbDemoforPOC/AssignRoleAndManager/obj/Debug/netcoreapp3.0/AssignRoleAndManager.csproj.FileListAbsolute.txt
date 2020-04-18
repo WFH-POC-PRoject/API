@@ -111,12 +111,12 @@ D:\API-New\AnbDemoforPOC\AssignRoleAndManager\bin\Debug\netcoreapp3.0\runtimes\w
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\staticwebassets\AssignRoleAndManager.StaticWebAssets.Manifest.cache
-D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\staticwebassets\AssignRoleAndManager.StaticWebAssets.xml
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\AssignRoleAndManager.MvcApplicationPartsAssemblyInfo.cache
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\AssignRoleAndManager.AssemblyInfoInputs.cache
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\AssignRoleAndManager.AssemblyInfo.cs
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\AssignRoleAndManager.RazorTargetAssemblyInfo.cache
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\AssignRoleAndManager.csproj.CopyComplete
+D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\staticwebassets\AssignRoleAndManager.StaticWebAssets.Manifest.cache
+D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\staticwebassets\AssignRoleAndManager.StaticWebAssets.xml
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\AssignRoleAndManager.dll
 D:\API-New\AnbDemoforPOC\AssignRoleAndManager\obj\Debug\netcoreapp3.0\AssignRoleAndManager.pdb

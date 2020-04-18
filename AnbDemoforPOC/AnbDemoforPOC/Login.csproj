@@ -10,6 +10,7 @@
     <PackageReference Include="IdentityServer4.AspNetIdentity" Version="3.0.0" />
     <PackageReference Include="IdentityServer4.EntityFramework" Version="3.0.0" />
     <PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
