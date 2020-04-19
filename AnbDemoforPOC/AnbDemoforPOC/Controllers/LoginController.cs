@@ -50,13 +50,15 @@ namespace AnbDemoforPOC.Controllers
                     if (await _userManager.CheckPasswordAsync(user, objuserlogin.PasswordHash))
                     {
                         appUser.Id = 1;
-                        appUser.UserName = role.FirstOrDefault();
+                        appUser.UserName = user.UserName;
+                        appUser.NormalizedUserName = role.FirstOrDefault();
                         return Ok(appUser);
                     }
                     else
                     {
                         appUser.Id = 2;
                         appUser.UserName = "";
+                        appUser.NormalizedUserName = "";
                         return Ok(appUser);
                     }
                 }
@@ -64,6 +66,7 @@ namespace AnbDemoforPOC.Controllers
                 {
                     appUser.Id = 3;
                     appUser.UserName = "";
+                    appUser.NormalizedUserName = "";
                     return Ok(appUser);
                 }
             }
@@ -71,6 +74,7 @@ namespace AnbDemoforPOC.Controllers
             {
                 appUser.Id = 4;
                 appUser.UserName = "";
+                appUser.NormalizedUserName = "";
                 return Ok(appUser);
             }
         }
