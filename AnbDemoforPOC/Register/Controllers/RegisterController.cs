@@ -29,7 +29,7 @@ namespace Register.Controllers
             userMgr = userManager;
             siginMgr = signInManager;
         }
-        public IConfiguration Configuration { get; }       
+        public IConfiguration Configuration { get; }
 
         [HttpPost("Register")]
         [AllowAnonymous]
@@ -39,7 +39,21 @@ namespace Register.Controllers
             try
             {
                 AppUser user = await userMgr.FindByEmailAsync(appUser.Email);
-                if (user == null)
+                AppUser checkwithusername = await userMgr.FindByNameAsync(appUser.UserName);
+
+                if (checkwithusername != null)
+                {
+                    _Message.Status = "Failure";
+                    _Message.StatusCode = 102;
+                    _Message.StatusMessage = "User already existed with this User Name.";
+                }
+                else if (user != null)
+                {
+                    _Message.Status = "Failure";
+                    _Message.StatusCode = 101;
+                    _Message.StatusMessage = "User already existed with this Email Id.";
+                }
+                else
                 {
                     user = new AppUser
                     {
@@ -85,13 +99,13 @@ namespace Register.Controllers
                         smtpClient.Dispose();
                         _Message.Status = "Success";
                         _Message.StatusCode = 200;
-                        _Message.StatusMessage = "User Successfully Created !!";
+                        _Message.StatusMessage = "User successfully created.";
                     }
                     else
                     {
                         _Message.Status = "Failure";
-                        _Message.StatusCode = 200;
-                        _Message.StatusMessage = "User Already Existed !!";
+                        _Message.StatusCode = 103;
+                        _Message.StatusMessage = "User registration failed.";
                     }
                 }
             }

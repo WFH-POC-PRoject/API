@@ -51,6 +51,13 @@ namespace ResetPassword.Controllers
                             _Message.StatusCode = 200;
                             _Message.StatusMessage = "Your Password has been reset successfully.";
                         }
+                        else
+                        {
+                            _Message.Status = "Failure";
+                            _Message.StatusCode = 400;
+                            _Message.StatusMessage = "Passwords must be at least 6 characters,Passwords must have at least one non alphanumeric character,Passwords must have at least one digit ('0'-'9'),Passwords must have at least one uppercase ('A'-'Z').";
+                            return Ok(_Message);
+                        }
                     }
                     else
                     {
