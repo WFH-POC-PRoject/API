@@ -34,29 +34,52 @@ namespace UpdateEmployee.Controllers
             Message _Message = new Message();
             try
             {
-                string userid = user.Id;
-                AppUser users = await _userManager.FindByIdAsync(userid);
+                AppUser users = await _userManager.FindByIdAsync(Convert.ToString(user.Id));
 
                 if (users != null)
                 {
-                    users.UserName = (user.UserName!=null || user.UserName != "") ? user.UserName : users.UserName; 
-                    users.FirstName = (user.FirstName!=null || user.FirstName != "") ? user.FirstName : users.FirstName;
-                    users.LastName = (user.LastName!=null || user.LastName !="") ? user.LastName : users.LastName;
-                    users.Email = (user.Email != null || user.Email != "") ? user.Email : users.Email;
-
-                    IdentityResult result = await _userManager.UpdateAsync(users);
-                    if (result.Succeeded == true)
+                    AppUser userEmail = await _userManager.FindByEmailAsync(user.Email);
+                    AppUser checkwithusername = await _userManager.FindByNameAsync(user.UserName);
+                    if (users.UserName != user.UserName && checkwithusername!=null)
                     {
-                        _Message.Status = "Success";
-                        _Message.StatusCode = 200;
-                        _Message.StatusMessage = "User Succefully Updated !!";
+                        _Message.Status = "Failure";
+                        _Message.StatusCode = 102;
+                        _Message.StatusMessage = "User already existed with this User Name.";
+                    }
+                    else if (users.Email != user.Email && userEmail != null)
+                    {
+                        _Message.Status = "Failure";
+                        _Message.StatusCode = 101;
+                        _Message.StatusMessage = "User already existed with this Email Id.";
                     }
                     else
                     {
-                        _Message.Status = "Failure";
-                        _Message.StatusCode = 200;
-                        _Message.StatusMessage = "User not updated !!";
+                        users.UserName = (user.UserName != null || user.UserName != "") ? user.UserName : users.UserName;
+                        users.FirstName = (user.FirstName != null || user.FirstName != "") ? user.FirstName : users.FirstName;
+                        users.LastName = (user.LastName != null || user.LastName != "") ? user.LastName : users.LastName;
+                        users.Email = (user.Email != null || user.Email != "") ? user.Email : users.Email;
+
+                        IdentityResult result = await _userManager.UpdateAsync(users);
+                        if (result.Succeeded == true)
+                        {
+                            _Message.Status = "Success";
+                            _Message.StatusCode = 200;
+                            _Message.StatusMessage = "User Succefully Updated !!";
+                        }
+                        else
+                        {
+                            _Message.Status = "Failure";
+                            _Message.StatusCode = 103;
+                            _Message.StatusMessage = "User not updated !!";
+                        }
                     }
+                     
+                }
+                else
+                {
+                    _Message.Status = "Failure";
+                    _Message.StatusCode = 104;
+                    _Message.StatusMessage = "User does not exist !!";
                 }
             }
             catch (Exception ex)

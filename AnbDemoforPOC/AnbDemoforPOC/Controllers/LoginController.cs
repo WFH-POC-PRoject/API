@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using AnbDemoforPOC.Models;
+using Login.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
@@ -39,6 +40,7 @@ namespace AnbDemoforPOC.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(AppUser objuserlogin)
         {
+            ManageUser manageUser = new ManageUser();
             AppUser appUser = new AppUser();
             var user = await _userManager.FindByNameAsync(objuserlogin.UserName);
             if (user != null)
@@ -49,33 +51,38 @@ namespace AnbDemoforPOC.Controllers
                 {
                     if (await _userManager.CheckPasswordAsync(user, objuserlogin.PasswordHash))
                     {
-                        appUser.Id = 1;
-                        appUser.UserName = user.UserName;
-                        appUser.NormalizedUserName = role.FirstOrDefault();
-                        return Ok(appUser);
+
+                        manageUser.StatusCode = 1;
+                        manageUser.UserName = user.UserName;
+                        manageUser.UserRole = role.FirstOrDefault();
+                        manageUser.UserId = Convert.ToString(user.Id);
+                        return Ok(manageUser);
                     }
                     else
                     {
-                        appUser.Id = 2;
-                        appUser.UserName = "";
-                        appUser.NormalizedUserName = "";
-                        return Ok(appUser);
+                        manageUser.StatusCode = 2;
+                        manageUser.UserName = "";
+                        manageUser.UserRole = "";
+                        manageUser.UserId = "";
+                        return Ok(manageUser);
                     }
                 }
                 else
                 {
-                    appUser.Id = 3;
-                    appUser.UserName = "";
-                    appUser.NormalizedUserName = "";
-                    return Ok(appUser);
+                    manageUser.StatusCode = 3;
+                    manageUser.UserName = "";
+                    manageUser.UserRole = "";
+                    manageUser.UserId = "";
+                    return Ok(manageUser);
                 }
             }
             else
             {
-                appUser.Id = 4;
-                appUser.UserName = "";
-                appUser.NormalizedUserName = "";
-                return Ok(appUser);
+                manageUser.StatusCode = 4;
+                manageUser.UserName = "";
+                manageUser.UserRole = "";
+                manageUser.UserId = "";
+                return Ok(manageUser);
             }
         }
 
