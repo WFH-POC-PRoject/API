@@ -34,6 +34,8 @@ namespace Employee.Controllers
         public IActionResult GetAllEmployees(string value)
         {
             List<UserRoles> Alldata = new List<UserRoles>();
+            List<UserRoles> Alldata1 = new List<UserRoles>();
+            List<UserRoles> Alldata2 = new List<UserRoles>();
             Message _Message = new Message();
             EmployeeManagement_POCContext DBFactory = new EmployeeManagement_POCContext();
 
@@ -41,10 +43,6 @@ namespace Employee.Controllers
             {
                 if (value != null)
                 {
-                    //List<AspNetUsers> _aspNetUsers =  DBFactory.AspNetUsers.ToList();
-                    //return Ok(_aspNetUsers);
-
-
                     var alldata = (from User in DBFactory.AspNetUsers
 
                                    join WU in DBFactory.AspNetUserRoles on User.Id equals WU.UserId
@@ -59,19 +57,33 @@ namespace Employee.Controllers
                                        Email = User.Email,
                                        RoleName = WR.Name,
                                        RoleId = WR.Id,
-                                       ManagerName = WR.Name
+                                       ManagerName = DBFactory.AspNetUsers.Where(x =>x.Id==User.Managerid).Select(x=>x.UserName).FirstOrDefault(),
+                                       ManagerId = User.Managerid
                                    }).FirstOrDefault();
                     Alldata.Add(alldata);
                 }
                 else
                 {
+                     Alldata1 = (from user in DBFactory.AspNetUsers
+                                where !DBFactory.AspNetUserRoles.Any(c => user.Id == c.UserId)
+                                select new UserRoles
+                               {
+                                   UserId = user.Id,
+                                   UserName = user.UserName,
+                                   FirstName = user.FirstName,
+                                   LastName = user.FirstName,
+                                   Email = user.Email,
+                                   RoleName = "",
+                                   RoleId = 0,
+                                    ManagerName = DBFactory.AspNetUsers.Where(x => x.Id == user.Managerid).Select(x => x.UserName).FirstOrDefault(),
+                                    ManagerId = user.Managerid
+                                }).ToList();
 
-                    Alldata = (from User in DBFactory.AspNetUsers
 
+                    
+                    Alldata2 = (from User in DBFactory.AspNetUsers
                                join WU in DBFactory.AspNetUserRoles on User.Id equals WU.UserId
-
                                join WR in DBFactory.AspNetRoles on WU.RoleId equals WR.Id
-
                                select new UserRoles
                                {
                                    UserId = User.Id,
@@ -80,13 +92,18 @@ namespace Employee.Controllers
                                    LastName = User.FirstName,
                                    Email = User.Email,
                                    RoleName = WR.Name,
-                                   RoleId = WR.Id
+                                   RoleId = WR.Id,
+                                   ManagerName = DBFactory.AspNetUsers.Where(x => x.Id == User.Managerid).Select(x => x.UserName).FirstOrDefault(),
+                                   ManagerId = User.Managerid
                                }).ToList();
 
-                    //user = userMgr.Users.ToList();
-                    //var roles = roleMgr.Roles.ToList();
-                    //var rolesd = userMgr.GetRolesAsync();
-                    //var rolesddd = userMgr.GetUsersInRoleAsync
+
+
+                    Alldata.AddRange(Alldata1);
+                    Alldata.AddRange(Alldata2);
+                    Alldata.OrderBy(x => x.UserId).ToList();
+
+
                 }
             }
             catch (Exception ex)

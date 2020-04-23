@@ -9,11 +9,11 @@ namespace AssignRoleAndManager.Models
     {
         public int UserId { get; set; }
         public int RoleId { get; set; }
+        public int Managerid { get; set; }
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-        public string Managerid { get; set; }
 
     }
 }

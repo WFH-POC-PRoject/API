@@ -9,6 +9,7 @@ namespace Employee.Models
     {
         public int UserId { get; set; }
         public int RoleId { get; set; }
+        public int? ManagerId { get; set; }
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

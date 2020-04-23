@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 using AssignRoleAndManager.Entities;
 using AssignRoleAndManager.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace AssignRoleAndManager.Controllers
 {
+    
     [ApiController]
-    [Route("[controller]")]
+    [EnableCors("AllowMyOrign")]
+    [Route("api/[controller]")]
     public class AssignRoleAndManagerController : ControllerBase
     {
 
@@ -25,9 +28,9 @@ namespace AssignRoleAndManager.Controllers
             _logger = logger;
         }
 
-        [HttpPost("GetAllEmployees")]
+        [HttpPost("AssignRoleAndManager")]
         [AllowAnonymous]
-        public IActionResult GetAllEmployees(AssignRoleAndManagerModel assignRoleAndManagerModel)
+        public IActionResult AssignRoleAndManager(AssignRoleAndManagerModel assignRoleAndManagerModel)
         {
             Message _Message = new Message();
             EmployeeManagement_POCContext DBFactory = new EmployeeManagement_POCContext();
@@ -47,20 +50,37 @@ namespace AssignRoleAndManager.Controllers
                 }
                 if (assignRoleAndManagerModel.RoleId > 0)
                 {
-                    var existRole = DBFactory.AspNetUserRoles.Where(x => x.RoleId == Convert.ToInt32(assignRoleAndManagerModel.RoleId)).FirstOrDefault();
-                    if (existRole == null)
+                    var addRole = DBFactory.AspNetUserRoles.Where(x => x.UserId == Convert.ToInt32(assignRoleAndManagerModel.UserId)).FirstOrDefault();
+                    if (addRole == null)
                     {
-                        existRole.RoleId = Convert.ToInt32(assignRoleAndManagerModel.RoleId);
-                        existRole.UserId = Convert.ToInt32(assignRoleAndManagerModel.UserId);
+                        AspNetUserRoles _aspNetUserRoles = new AspNetUserRoles();
+                        _aspNetUserRoles.RoleId = Convert.ToInt32(assignRoleAndManagerModel.RoleId);
+                        _aspNetUserRoles.UserId = Convert.ToInt32(assignRoleAndManagerModel.UserId);
 
-                        DBFactory.AspNetUserRoles.Add(existRole);
+                        DBFactory.AspNetUserRoles.Add(_aspNetUserRoles);
                         var flag = DBFactory.SaveChanges();
                         if (flag > 0)
                         {
                             _Message.Status = "Success";
                             _Message.StatusCode = 200;
-                            _Message.StatusMessage = "Role Successfully Asigned !!";
+                            _Message.StatusMessage = "Role Successfully Asigned.";
                         }
+                        return Ok(_Message);
+                    }
+                    else
+                    {
+                        var existRole = DBFactory.AspNetUserRoles.Where(x => x.UserId == Convert.ToInt32(assignRoleAndManagerModel.UserId)).FirstOrDefault();
+                        existRole.RoleId = Convert.ToInt32(assignRoleAndManagerModel.RoleId);
+                        existRole.UserId = Convert.ToInt32(assignRoleAndManagerModel.UserId);
+                        DBFactory.Entry(existRole).State = EntityState.Modified;
+                        var flag = DBFactory.SaveChanges();
+                        if (flag > 0)
+                        {
+                            _Message.Status = "Success";
+                            _Message.StatusCode = 200;
+                            _Message.StatusMessage = "Role Successfully updated.";
+                        }
+                        return Ok(_Message);
                     }
                 }
 
