@@ -70,9 +70,13 @@ namespace AssignRoleAndManager.Controllers
                     else
                     {
                         var existRole = DBFactory.AspNetUserRoles.Where(x => x.UserId == Convert.ToInt32(assignRoleAndManagerModel.UserId)).FirstOrDefault();
-                        existRole.RoleId = Convert.ToInt32(assignRoleAndManagerModel.RoleId);
-                        existRole.UserId = Convert.ToInt32(assignRoleAndManagerModel.UserId);
-                        DBFactory.Entry(existRole).State = EntityState.Modified;
+                        DBFactory.AspNetUserRoles.Remove(existRole);
+                        DBFactory.SaveChanges();
+                        
+                        AspNetUserRoles _aspNetUserRoles = new AspNetUserRoles();
+                        _aspNetUserRoles.RoleId = Convert.ToInt32(assignRoleAndManagerModel.RoleId);
+                        _aspNetUserRoles.UserId = Convert.ToInt32(assignRoleAndManagerModel.UserId);
+                        DBFactory.AspNetUserRoles.Add(_aspNetUserRoles);
                         var flag = DBFactory.SaveChanges();
                         if (flag > 0)
                         {

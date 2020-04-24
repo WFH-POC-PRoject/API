@@ -53,11 +53,11 @@ namespace Employee.Controllers
                                        UserId = User.Id,
                                        UserName = User.UserName,
                                        FirstName = User.FirstName,
-                                       LastName = User.FirstName,
+                                       LastName = User.LastName,
                                        Email = User.Email,
                                        RoleName = WR.Name,
                                        RoleId = WR.Id,
-                                       ManagerName = DBFactory.AspNetUsers.Where(x =>x.Id==User.Managerid).Select(x=>x.UserName).FirstOrDefault(),
+                                       ManagerName = DBFactory.AspNetUsers.Where(x =>x.Id==User.Managerid).Select(x=>x.FirstName + ' ' + x.LastName).FirstOrDefault(),
                                        ManagerId = User.Managerid
                                    }).FirstOrDefault();
                     Alldata.Add(alldata);
@@ -71,11 +71,11 @@ namespace Employee.Controllers
                                    UserId = user.Id,
                                    UserName = user.UserName,
                                    FirstName = user.FirstName,
-                                   LastName = user.FirstName,
+                                   LastName = user.LastName,
                                    Email = user.Email,
                                    RoleName = "",
                                    RoleId = 0,
-                                    ManagerName = DBFactory.AspNetUsers.Where(x => x.Id == user.Managerid).Select(x => x.UserName).FirstOrDefault(),
+                                    ManagerName = DBFactory.AspNetUsers.Where(x => x.Id == user.Managerid).Select(x => x.FirstName + ' ' + x.LastName).FirstOrDefault(),
                                     ManagerId = user.Managerid
                                 }).ToList();
 
@@ -89,11 +89,11 @@ namespace Employee.Controllers
                                    UserId = User.Id,
                                    UserName = User.UserName,
                                    FirstName = User.FirstName,
-                                   LastName = User.FirstName,
+                                   LastName = User.LastName,
                                    Email = User.Email,
                                    RoleName = WR.Name,
                                    RoleId = WR.Id,
-                                   ManagerName = DBFactory.AspNetUsers.Where(x => x.Id == User.Managerid).Select(x => x.UserName).FirstOrDefault(),
+                                   ManagerName = DBFactory.AspNetUsers.Where(x => x.Id == User.Managerid).Select(x => x.FirstName + ' ' + x.LastName).FirstOrDefault(),
                                    ManagerId = User.Managerid
                                }).ToList();
 
