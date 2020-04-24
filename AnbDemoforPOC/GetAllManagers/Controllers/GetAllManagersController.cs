@@ -17,7 +17,7 @@ namespace GetAllManagers.Controllers
     [Route("api/[controller]")]
     public class GetAllManagersController : ControllerBase
     {
-        
+
 
         private readonly ILogger<GetAllManagersController> _logger;
 
@@ -31,13 +31,18 @@ namespace GetAllManagers.Controllers
         public IActionResult GetAllManagers()
         {
             Message _Message = new Message();
-            
+
             EmployeeManagement_POCContext DBFactory = new EmployeeManagement_POCContext();
 
             try
             {
-               var managesrs =  DBFactory.AspNetUsers.Where(x => x.Managerid != null).Select(x => x.Managerid).Distinct().ToList().ToArray();
-                var managerinfo = DBFactory.AspNetUsers.Where(x => managesrs.Contains(x.Id)).Select(x=> new { value = x.Id, label = x.FirstName +' '+ x.LastName }).ToList();
+                var managesrs = DBFactory.AspNetUserRoles.Where(y => y.RoleId == 2).Select(x => x.UserId).Distinct().ToList().ToArray();
+                if (managesrs == null || managesrs.Count() == 0)
+                {
+                    managesrs = DBFactory.AspNetUserRoles.Where(y => y.RoleId == 1).Select(x => x.UserId).Distinct().ToList().ToArray();
+
+                }
+                var managerinfo = DBFactory.AspNetUsers.Where(x => managesrs.Contains(x.Id)).Select(x => new { value = x.Id, label = x.FirstName + ' ' + x.LastName }).ToList();
                 return Ok(managerinfo);
             }
             catch (Exception ex)
